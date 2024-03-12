@@ -1,13 +1,15 @@
 import {Link, NavLink} from "react-router-dom";
 import {useAuth} from "./AuthContext.jsx";
 import {useEffect, useState} from "react";
+
 const Header = () => {
     const { isLoggedIn, userId, logout } = useAuth();
     const [userData, setUserData] = useState(null);
-
+    const apiUrl = import.meta.env.VITE_API_URL;
     useEffect(() => {
+
         if (isLoggedIn && userId) {
-            const url = `http://localhost:3000/${userId}`;
+            const url = `${apiUrl}/${userId}`;
             fetch(url, {
                 method: "GET",
                 headers: {

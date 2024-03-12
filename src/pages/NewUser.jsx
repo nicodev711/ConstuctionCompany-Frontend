@@ -6,11 +6,11 @@ const NewUser = () => {
     const [newUser, setNewUser] = useState({ username: '', email: '', password: '' });
     const [error, setError] = useState([]);
     const navigate = useNavigate();
-    const url = "http://localhost:3000/register";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/register`;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(url, {
+        const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

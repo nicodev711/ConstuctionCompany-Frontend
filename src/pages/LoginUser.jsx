@@ -8,11 +8,11 @@ const LoginUser = () => {
     const [error, setError] = useState([]);
     const navigate = useNavigate();
     const { login } = useAuth(); // Destructure the login function from the context
-    const url = "http://localhost:3000/login";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/login`;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(url, {
+        const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

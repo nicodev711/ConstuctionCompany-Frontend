@@ -6,7 +6,8 @@ import NewUser from "./pages/NewUser.jsx";
 import './index.css';
 import App from "./App.jsx";
 import LoginUser from "./pages/LoginUser.jsx";
-import { AuthProvider } from "./components/AuthContext.jsx"; // Ensure this path is correct
+import { AuthProvider } from "./components/AuthContext.jsx";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
