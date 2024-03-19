@@ -1,5 +1,5 @@
 import Layout from "../Layout.jsx";
-import { Link } from 'react-router-dom'; // Assuming you're using react-router for navigation
+import { Link } from 'react-router-dom';
 
 const Buildings = () => {
     return (
