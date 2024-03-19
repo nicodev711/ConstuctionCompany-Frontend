@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router-dom";
-import {useAuth} from "./AuthContext.jsx";
+import {useAuth} from "./AuthContext/AuthContext.jsx";
 import {useEffect, useState} from "react";
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
                 ) : (
                     <div className={"flex items-center space-x-2"}>
                         <NavLink to={"/"} className={({isActive}) => isActive ? "active-link" : "p-4"}>Home</NavLink>
-                        <NavLink to={"/game"} className={({isActive}) => isActive ? "active-link" : "p-4"}>The Game</NavLink>
+                        {/*<NavLink to={"/game"} className={({isActive}) => isActive ? "active-link" : "p-4"}>The Game</NavLink>*/}
                     </div>
                 )}
 

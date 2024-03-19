@@ -1,7 +1,7 @@
 import Layout from "../components/Layout.jsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useAuth } from "../components/AuthContext.jsx"; // Adjust the path if necessary
+import { useAuth } from "../components/AuthContext/AuthContext.jsx"; // Adjust the path if necessary
 
 const LoginUser = () => {
     const [logUser, setLogUser] = useState({ email: '', password: '' });
